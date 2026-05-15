@@ -6,7 +6,7 @@ const API = "https://todolist-nwr8.onrender.com";
 
 // FETCH TODOS
 export const fetchTodos = createAsyncThunk(
-    "todos",
+    "todos/fetchTodos",
     async () => {
         const response = await axios.get(API);
         return response.data;
@@ -16,7 +16,7 @@ export const fetchTodos = createAsyncThunk(
 
 // ADD TODO
 export const addTodo = createAsyncThunk(
-    "todos",
+    "todos/addTodo",
     async (text) => {
         const response = await axios.post(API, { text });
         return response.data;
@@ -30,6 +30,8 @@ const todoSlice = createSlice({
     initialState: {
         items: []
     },
+
+    reducers: {},
 
     extraReducers: (builder) => {
 

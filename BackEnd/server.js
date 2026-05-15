@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb://bindu:bindu3398_@ac-gnf6fj3-shard-00-00.onz4xlk.mongodb.net:27017,ac-gnf6fj3-shard-00-01.onz4xlk.mongodb.net:27017,ac-gnf6fj3-shard-00-02.onz4xlk.mongodb.net:27017/?ssl=true&replicaSet=atlas-m05h44-shard-0&authSource=admin&appName=TodoCluster")
 .then(()=> console.log('Connected to MongoDB'))
 .catch((err) => console.log('Error connecting to MongoDB:', err));
 
