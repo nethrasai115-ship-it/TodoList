@@ -3,7 +3,6 @@ const router = express.Router();
 
 const Todo = require("../models/Todo");
 
-
 // ADD TODO
 router.post("/", async (req, res) => {
     try {
