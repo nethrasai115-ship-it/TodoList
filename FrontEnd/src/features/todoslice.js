@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = "https://todolist-nwr8.onrender.com/todos";
+const API = "https://todolist-nwr8.onrender.com";
 
 
 // FETCH TODOS
 export const fetchTodos = createAsyncThunk(
-    "todos/fetchTodos",
+    "todos",
     async () => {
         const response = await axios.get(API);
         return response.data;
@@ -16,7 +16,7 @@ export const fetchTodos = createAsyncThunk(
 
 // ADD TODO
 export const addTodo = createAsyncThunk(
-    "todos/addTodo",
+    "todos",
     async (text) => {
         const response = await axios.post(API, { text });
         return response.data;
