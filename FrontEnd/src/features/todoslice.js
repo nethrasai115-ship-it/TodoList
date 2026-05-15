@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = "http://localhost:5000/todos";
+const API = "https://todolist-nwr8.onrender.com/todos";
 
 
 // FETCH TODOS
